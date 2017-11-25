@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="vue/css/style.css">
         <script type="text/javascript" src="vue/js/ajax.js"></script>
         <script type="text/javascript" src="vue/js/no.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
 
     <body>

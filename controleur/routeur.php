@@ -355,7 +355,7 @@ class Routeur {
                         
                     } else {
 
-                        $rep = 'Veuillez ajouter des produits dans votre panier avant de le valider';
+                        $rep = 'Ajoutez des produits au panier avant de continuer';
 
                     }
 
@@ -363,9 +363,63 @@ class Routeur {
 
                 }
 
-                else if ($_GET['action'] == 'form') {
+                else if ($_GET['action'] == 'form')  {
+
+                    if (isset($_SESSION['panier']) && (!empty($_SESSION['panier'])) ) {
 
                     $this->ctrlCommande->form();
+
+                    } else {
+
+                        throw new Exception ('<div style="text-align:center"><h4>Veuillez ajouter des produits à votre panier avant d\'accedr à cette page</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+
+                    }
+
+                }
+
+                
+
+                else if ($_GET['action'] == 'fin') {
+
+                    if ((isset($_SESSION['panier']) && (!empty($_SESSION['panier']))) && (isset($_POST['name']) && (!empty($_POST['name']))) && (isset($_POST['firstname']) && (!empty($_POST['firstname']))) && (isset($_POST['ville']) && (!empty($_POST['ville']))) && (isset($_POST['adress']) && (!empty($_POST['adress']))) && (isset($_POST['code']) && (!empty($_POST['code']))) && (isset($_POST['email']) && (!empty($_POST['email']))) ) 
+                    {
+
+                        $name = $this->getParametre($_POST,'name');
+                        $firstname = $this->getParametre($_POST,'firstname');
+                        $email = $this->getParametre($_POST,'email');
+                        $adress = $this->getParametre($_POST,'adress');
+                        $ville = $this->getParametre($_POST,'ville');
+                        $code = $this->getParametre($_POST,'code');
+                        $name_item = join("\n \n", $_SESSION['panier']['name'] );
+
+                        ini_set( 'display_errors', 1 );
+ 
+                        error_reporting( E_ALL );
+                     
+                        $from = "j.fernandes11@laposte.net";
+                     
+                        $to = "$email";
+                     
+                        $subject = "Confirmation de votre commande";
+                     
+                        $message = "Bonjour \n Nous avons le plaisir de vous confirmer votre commande chez Burger Code \n Cet email vous servira de justificatif de commande à montrer en boutique ou au livreur \n En vous souhaitant bon appétit \n Burger CODE \n Voici le récapitulatif de votre commande : \n \n" .$name_item ;
+
+                        $message_burger = "Le client " . $name . " " . $firstname . " qui habite " . $adress . " " . $ville . " " . $code ." a commandé : \n \n".$name_item;
+                     
+                        $headers = "From:" . $from;
+                     
+                        mail($to,$subject,$message, $headers);
+                        mail($from,$subject,$message_burger, $headers);
+                     
+                        $this->ctrlPanier->supprimerPanier();
+                        $this->ctrlCommande->commande();
+
+
+                    } else {
+
+                        throw new Exception ('<div style="text-align:center"><h4>Votre commande à déja été valider</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+
+                    }
 
                 }
 

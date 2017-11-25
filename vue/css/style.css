@@ -26,6 +26,23 @@ body
    margin-bottom: 40px;
 }
 
+.fin {
+    text-align:center;
+    background-color:white;
+    margin:15px;
+    border-radius: 10px;
+}
+
+.swal-button__loader div {
+    text-align:center;
+    margin : 0 auto;
+    position:none;
+}
+
+.swal-modal {
+    text-align:center;
+}
+
 .choix {
 
     margin-top:20px;

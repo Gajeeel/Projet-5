@@ -26,7 +26,7 @@ function Ajax (){
                 dataType: 'json',
                 success : function(json){
 
-                    alert("Votre produit a été ajouté au panier!"); //alert user
+                    swal("Le produit a été ajouté à votre panier", "", "success");
                     button_content.html('Ajouter au panier'); //reset button text to original text
                     console.log(form_data);
 
@@ -34,7 +34,7 @@ function Ajax (){
 
                 error : function(json){
 
-                    alert ('Erreur! Veuillez contacter l\'admin');
+                    swal("Oups ...","Erreur ! Veuillez contacter l\'admin","error");
                     button_content.html('Ajouter au panier'); //reset button text to original text
                     console.log(form_data);
 
@@ -99,7 +99,7 @@ function Ajax (){
                         
                     } else {
                         
-                        alert(json.rep);
+                        swal("Pas si vite !", json.rep , "error");
                         
                     }
                 }
