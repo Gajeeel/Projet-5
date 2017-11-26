@@ -381,7 +381,7 @@ class Routeur {
 
                 else if ($_GET['action'] == 'fin') {
 
-                    if ((isset($_SESSION['panier']) && (!empty($_SESSION['panier']))) && (isset($_POST['name']) && (!empty($_POST['name']))) && (isset($_POST['firstname']) && (!empty($_POST['firstname']))) && (isset($_POST['ville']) && (!empty($_POST['ville']))) && (isset($_POST['adress']) && (!empty($_POST['adress']))) && (isset($_POST['code']) && (!empty($_POST['code']))) && (isset($_POST['email']) && (!empty($_POST['email']))) ) 
+                    if ((isset($_SESSION['panier']) && (!empty($_SESSION['panier']))) && (isset($_POST['name']) && (!empty($_POST['name']))) && (isset($_POST['firstname']) && (!empty($_POST['firstname']))) && (isset($_POST['ville']) && (!empty($_POST['ville']))) && (isset($_POST['adress']) && (!empty($_POST['adress']))) && (isset($_POST['code']) && (!empty($_POST['code']))) && (isset($_POST['email']) && (!empty($_POST['email']))) && (isset($_POST['livraison'])) ) 
                     {
 
                         $name = $this->getParametre($_POST,'name');
@@ -391,6 +391,7 @@ class Routeur {
                         $ville = $this->getParametre($_POST,'ville');
                         $code = $this->getParametre($_POST,'code');
                         $name_item = join("\n \n", $_SESSION['panier']['name'] );
+                        $livraison = $_POST['livraison'];
 
                         ini_set( 'display_errors', 1 );
  
@@ -404,7 +405,7 @@ class Routeur {
                      
                         $message = "Bonjour \n Nous avons le plaisir de vous confirmer votre commande chez Burger Code \n Cet email vous servira de justificatif de commande à montrer en boutique ou au livreur \n En vous souhaitant bon appétit \n Burger CODE \n Voici le récapitulatif de votre commande : \n \n" .$name_item ;
 
-                        $message_burger = "Le client " . $name . " " . $firstname . " qui habite " . $adress . " " . $ville . " " . $code ." a commandé : \n \n".$name_item;
+                        $message_burger = "Le client " . $name . " " . $firstname . " habite " . $adress . " " . $ville . " " . $code .". Il a choisis la livraison " . $livraison . " et a commandé : \n \n".$name_item;
                      
                         $headers = "From:" . $from;
                      

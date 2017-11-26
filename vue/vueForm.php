@@ -33,10 +33,10 @@
                     <p class="comments"></p>
                 </div>
                 <div class="col-md-12 choix">
-                    <input type="radio" name="livraison" value="domicile"> Livraison à domicile 
+                    <input type="radio" name="livraison" value="A domicile"> Livraison à domicile 
                     <br>
                     <br>
-                    <input type="radio" name="livraison" value="boutique" checked > Retrait en boutique
+                    <input type="radio" name="livraison" value="Retrait en boutique" checked > Retrait en boutique
                 </div>
                 <div class="col-md-12">
                     <p class="blue"><strong>* Ces informations sont requises.</strong></p>
