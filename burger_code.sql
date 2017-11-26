@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 21 nov. 2017 à 02:31
+-- Généré le :  Dim 26 nov. 2017 à 00:07
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -46,41 +46,6 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (4, 'Salades'),
 (5, 'Boissons'),
 (6, 'Desserts');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `client`
---
-
-DROP TABLE IF EXISTS `client`;
-CREATE TABLE IF NOT EXISTS `client` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `ville` varchar(255) NOT NULL,
-  `code` int(11) NOT NULL,
-  `id_commande` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_commande` (`id_commande`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `commande`
---
-
-DROP TABLE IF EXISTS `commande`;
-CREATE TABLE IF NOT EXISTS `commande` (
-  `id` int(11) NOT NULL,
-  `id_item` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `prix` int(11) NOT NULL,
-  KEY `id_item` (`id_item`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -139,23 +104,6 @@ INSERT INTO `items` (`id`, `name`, `description`, `price`, `image`, `category`, 
 (31, 'Beignet', 'Au choix: Au chocolat ou à la vanille', 2.9, 'd3.png', 6, 1),
 (32, 'Milkshake', 'Au choix: Fraise, Vanille ou Chocolat', 3.9, 'd4.png', 6, 1),
 (33, 'Sundae', 'Au choix: Fraise, Caramel ou Chocolat', 4.9, 'd5.png', 6, 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `liaison_item_commande`
---
-
-DROP TABLE IF EXISTS `liaison_item_commande`;
-CREATE TABLE IF NOT EXISTS `liaison_item_commande` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_commande` int(11) NOT NULL,
-  `id_item` int(11) NOT NULL,
-  `quantite` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_commande` (`id_commande`),
-  KEY `id_item` (`id_item`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contraintes pour les tables déchargées
