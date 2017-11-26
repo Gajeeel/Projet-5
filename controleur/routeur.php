@@ -50,13 +50,13 @@ class Routeur {
 
                         } else {
 
-                            throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                            throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                         }
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
 
@@ -209,13 +209,13 @@ class Routeur {
 
                                 } else {
 
-                                    throw new Exception ('<div style="text-align:center"><h4>Le fichier ne doit pas dépasser les 1MO</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Retourner à l\'admin</a></div>');
+                                    throw new Exception ('<div style="text-align:center"><h4>Le fichier ne doit pas dépasser les 1MO</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Esapce Admin</a></div>');
 
                                 }
 
                             } else {
 
-                                throw new Exception ('<div style="text-align:center"><h4>Les extensions autorisés sont: .jpg, .jpeg .png .gif</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Retourner à l\'admin</a></div>');
+                                throw new Exception ('<div style="text-align:center"><h4>Les extensions autorisés sont: .jpg, .jpeg .png .gif</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Esapce Admin</a></div>');
 
                             }
 
@@ -228,7 +228,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Veuillez remplir tout les champs avant d\'ajouter votre produit</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Retourner à l\'admin</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Veuillez remplir tout les champs avant d\'ajouter votre produit</h4> <br><br> <a type="button" href="index.php?action=admin" class="btn btn-primary btn-lg" >Esapce Admin</a></div>');
                     }
 
                     
@@ -243,7 +243,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
                     
@@ -266,7 +266,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
                     
@@ -314,7 +314,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
 
@@ -340,7 +340,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
 
@@ -371,7 +371,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Veuillez ajouter des produits à votre panier avant d\'accedr à cette page</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Veuillez ajouter des produits à votre panier avant d\'accedr à cette page</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
 
@@ -417,7 +417,7 @@ class Routeur {
 
                     } else {
 
-                        throw new Exception ('<div style="text-align:center"><h4>Votre commande à déja été valider</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                        throw new Exception ('<div style="text-align:center"><h4>Votre commande à déja été valider</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                     }
 
@@ -425,7 +425,7 @@ class Routeur {
 
                 else {
 
-                    throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Retourner à l\'accueil</a></div>');
+                    throw new Exception ('<div style="text-align:center"><h4>Oups ... cette page est introuvable</h4> <br><br> <a type="button" href="index.php" class="btn btn-primary btn-lg" >Accueil</a></div>');
 
                 }
 
